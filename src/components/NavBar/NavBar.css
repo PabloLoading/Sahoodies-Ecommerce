@@ -1,0 +1,37 @@
+
+
+.NavBar{
+    background-color: #fcfcfa;
+    color: #000;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+}
+
+nav{
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.left-wrapper{
+    display: flex;
+    align-items: baseline;
+}
+h1{
+    margin-right: 2rem;
+}
+h1:hover{
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+}
+
