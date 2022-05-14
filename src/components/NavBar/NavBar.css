@@ -4,7 +4,6 @@
     background-color: #fcfcfa;
     color: #000;
     padding: 1rem 0;
-    position: fixed;
     width: 100%;
     z-index: 200;
 }
@@ -33,5 +32,9 @@ h1:hover{
 
 ul{
     display: flex;
+}
+.icons-list{
+    display: flex;
+    align-items:baseline;
 }
 

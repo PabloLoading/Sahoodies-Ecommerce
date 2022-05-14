@@ -1,4 +1,8 @@
+import CartWidget from '../CartWidget/CartWidget';
 import LinkedTitle from '../LinkedTitle/LinkedTitle';
+import IconButton from '../IconButton/IconButton';
+import {VscAccount} from 'react-icons/vsc';
+import {FiSearch} from 'react-icons/fi';
 import './NavBar.css'
 
 function NavBar(){
@@ -13,8 +17,10 @@ function NavBar(){
                         <LinkedTitle target='#' title='Ofertas'/>
                     </ul>
                 </div>
-                <ul className='icons-lists'>
-                    <LinkedTitle target='#' title='Login'/>
+                <ul className='icons-list'>
+                    <IconButton icon={FiSearch}/>
+                    <IconButton icon={VscAccount}/>
+                    <CartWidget/>
                 </ul>
             </nav>
         </div>

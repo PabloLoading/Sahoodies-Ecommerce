@@ -1,0 +1,13 @@
+.CartWidget{
+    display: flex;
+    align-items: baseline;
+    
+    margin-left: 1.2rem;
+}
+.CartWidget:hover{
+    cursor: pointer;
+}
+.CartWidget p{
+    margin-left: 1px;
+    font-size: 22px;
+}
