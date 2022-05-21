@@ -1,16 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+
+/*
+Colors:
+#52489C purple 1
+#4062BB blue 2
+#59C3C3 green 3
+#EBEBEB soft white 4
+#F45B69 red 5
+*/
+
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+
+  --color1: #52489C;
+  --color2: #4062BB;
+  --color3: #59C3C3;
+  --color4: #EBEBEB;
+  --color5: #F45B69;
 }
 
 
 .App {
   text-align: center;
-  background-color: #f0f0f0;
-  height:100vh;
+  background-color: var(--color4);
+  min-height: 100vh;
 }
 

@@ -1,11 +1,23 @@
-import ItemCount from '../ItemCount/ItemCount'
+import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import getItems from '../../AsyncMock'
 
-const ItemListContainer=(promps)=>{
+const ItemListContainer=(props)=>{
+
+    const [products,setProducts] = useState([])
+    
+    useEffect(()=>{
+        
+        getItems().then(items=>{
+            setProducts(items)
+        })
+    },[])
+
     return (
         <section className='item-list-container'>
-            <h3>{promps.greeting}</h3>
-            <ItemCount stock={5} initial={2}/>
+            <ItemList items={products}/>
         </section>
     )
 }

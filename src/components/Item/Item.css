@@ -1,0 +1,21 @@
+.item{
+    background-color: #fff;
+    box-shadow: 2px 2px 8px #ccc;
+}
+.item:hover{
+    box-shadow: 3px 3px 15px #999;
+    cursor: pointer;
+}
+
+.item img{
+    width: 100%;
+}
+.text{
+    text-align: left;
+    color: var(--color1);
+    font-size: 14px;
+    padding: 10px 10px;
+}
+.text .title{
+    margin-bottom: 5px;
+}
