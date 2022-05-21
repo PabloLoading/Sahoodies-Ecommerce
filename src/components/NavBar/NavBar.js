@@ -18,8 +18,8 @@ function NavBar(){
                     </ul>
                 </div>
                 <ul className='icons-list'>
-                    <IconButton icon={FiSearch}/>
-                    <IconButton icon={VscAccount}/>
+                    <IconButton margin='0 1.2rem' icon={FiSearch}/>
+                    <IconButton margin='0 1.2rem' icon={VscAccount}/>
                     <CartWidget/>
                 </ul>
             </nav>

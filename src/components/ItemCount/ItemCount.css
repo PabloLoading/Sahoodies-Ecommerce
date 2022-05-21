@@ -1,0 +1,45 @@
+.item-count{
+    max-width: 200px;
+    width: 85%;
+    margin: 100px auto;
+    --main-color: rgb(11, 69, 161);
+}
+
+.counter{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgb(187, 183, 183);
+}
+.counter p{
+    font-size: 18px;
+}
+.move-count{
+    padding-top: 3px;
+    font-size: 20px;
+    width: 30px;
+    color: var(--main-color);
+}
+.move-count:hover{
+    cursor: pointer;
+}
+
+
+.addItem{
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 16px;
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    padding: 4px 0;
+}
+.addItem:hover{
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+}

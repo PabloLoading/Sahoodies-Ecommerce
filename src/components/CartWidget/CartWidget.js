@@ -6,7 +6,7 @@ const CartWidget=()=>{
     return (
         <div className='CartWidget'>
             <BsCart size='1.6rem'/>
-            <p>4</p>
+            <div className='number'><p>4</p></div>
         </div>
     )
 }

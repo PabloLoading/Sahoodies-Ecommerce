@@ -1,14 +1,14 @@
 import './IconButton.css'
 
-const IconButton=(promps)=>{
+const IconButton=(props)=>{
     
     
     let params={
         size: '1.6rem'
     }
-    let icono=promps.icon(params);
+    let icono=props.icon(params);
     return (
-        <div className="IconButton">
+        <div className="IconButton" style={{margin:props.margin}}>
             {icono}
         </div>
     )
