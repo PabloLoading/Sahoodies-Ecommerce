@@ -1,7 +1,4 @@
 .item-count{
-    max-width: 200px;
-    width: 85%;
-    margin: 100px auto;
     --main-color: var(--color2);
 }
 
@@ -15,12 +12,12 @@
     border: 2px solid var(--color4);
 }
 .counter p{
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 .move-count{
     padding-top: 3px;
-    font-size: 20px;
-    width: 30px;
+    font-size: 1.25rem;
+    width: 2rem;
     color: var(--main-color);
 }
 .move-count:hover{
@@ -31,7 +28,7 @@
 .addItem{
     margin-top: 1rem;
     width: 100%;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: #fff;
     border: 2px solid var(--main-color);
     color: var(--main-color);

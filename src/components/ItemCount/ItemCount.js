@@ -6,11 +6,7 @@ import IconButton from '../IconButton/IconButton'
 import {IoRemove} from 'react-icons/io5'
 
 const ItemCount = (props)=>{
-    let start=0
-    if(props.initial){
-        start=props.initial
-    }
-    const [count,setCount] = useState(start)
+    const [count,setCount] = useState(props.initial || 0)
 
     const increment = ()=>{
         if(count<props.stock){

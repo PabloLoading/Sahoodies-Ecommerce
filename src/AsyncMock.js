@@ -58,9 +58,14 @@ const items=[
 
 ]
 
-const getItems=()=>{
+export const getItems=()=>{
     return new Promise((res,rej)=>{
         setInterval(()=>res(items),2000)
     })
 }
-export default getItems
+
+export const getItem=id=>{
+    return new Promise((res,rej)=>{
+        setInterval(()=>res(items.find(item=>item.id==id)),2000)
+    })
+}
