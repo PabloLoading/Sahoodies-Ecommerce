@@ -27,6 +27,12 @@ nav{
 h1{
     margin-right: 2rem;
 }
+.link{
+    text-decoration: none;
+}
+.nav-left-icons{
+    margin: 0 1.2rem;
+}
 h1:hover{
     cursor: pointer;
 }

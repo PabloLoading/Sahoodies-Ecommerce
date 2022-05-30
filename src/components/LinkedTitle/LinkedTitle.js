@@ -1,8 +1,11 @@
 import './LinkedTitle.css'
+import {Link} from 'react-router-dom'
 
-const LinkedTitle=(promps)=>{
+const LinkedTitle=(props)=>{
     return (
-        <li><a href={promps.target}>{promps.title}</a></li>
+        <li>
+            <Link className='link' to={props.target}>{props.title}</Link>
+        </li>
     )
 }
 

@@ -1,7 +1,7 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail=({item})=>{
+const ItemDetail=({onAdd,item})=>{
     return (
         <section className="item-detail">
             <div className='img-container'>
@@ -14,7 +14,7 @@ const ItemDetail=({item})=>{
                     <p className='price'>${item.price} USD</p>
                 </div>
                 <div className='counter-container'>
-                    <ItemCount stock={item.stock}/>
+                    <ItemCount onAdd={onAdd} stock={item.stock}/>
                 </div>
             </div>
         </section>

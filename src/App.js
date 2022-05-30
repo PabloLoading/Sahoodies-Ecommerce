@@ -3,15 +3,21 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
-//     <ItemListContainer greeting='Querido tutor que tengas un excelente dia <3'/> 
-//<p className='temp'>a</p>
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <ItemListContainer />
-      <ItemDetailContainer />
+      <BrowserRouter>
+        <NavBar/>
+        <div className='top-space'></div>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:catId' element={<ItemListContainer/>}/>
+          <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+          <Route path='*' element={<h2>Lo sentimos, la pagina que buscas no existe.</h2>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

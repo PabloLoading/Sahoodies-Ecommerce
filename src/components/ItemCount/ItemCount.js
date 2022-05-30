@@ -19,7 +19,7 @@ const ItemCount = (props)=>{
         }
     }
     const checkAndGo=()=>{
-        if(count<props.stock){
+        if(count<=props.stock){
             props.onAdd(count)
         }
     }

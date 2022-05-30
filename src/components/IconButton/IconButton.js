@@ -8,7 +8,7 @@ const IconButton=(props)=>{
     }
     let icono=props.icon(params);
     return (
-        <div className="IconButton" style={{margin:props.margin}}>
+        <div className="IconButton">
             {icono}
         </div>
     )

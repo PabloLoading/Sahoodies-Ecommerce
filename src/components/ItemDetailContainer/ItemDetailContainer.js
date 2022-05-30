@@ -3,27 +3,48 @@ import './ItemDetailContainer.css'
 import {useState , useEffect} from 'react'
 import { getItem } from '../../AsyncMock'
 import ItemCount from "../ItemCount/ItemCount"
+import { useParams } from "react-router-dom"
+
 
 const ItemDetailContainer=(props)=>{
 
-
+    const {itemId} = useParams()
     const [product,setProduct] = useState({})
+    const [exist,setExist] = useState(true)
     const [load,setLoad] = useState(false)
 
     useEffect(()=>{
 
-        getItem(1002).then(item=>{
+        getItem(itemId).then(item=>{
             setProduct(item)
-            setLoad(true)
         })
+        .catch(e=>setExist(false))
+        .finally(()=>setLoad(true))
         
         
 
-    },[])
+    },[itemId,exist])
+
+
+    const onAdd=(count)=>{
+        console.log(`Agregue al carrito ${count} unidades`)
+    }
+    const who=()=>{
+        if(!load){
+            return <p>Loading ...</p>
+        }
+        else if(load && exist){
+            return <ItemDetail onAdd={onAdd} item={product}/>
+        }
+        else if(load && !exist){
+            return <h2>Lo sentimos, el producto que buscabas no existe.</h2>
+        }
+
+    }
 
     return (
         <div className="item-detail-container">
-            {load ? <ItemDetail item={product}/>: <div></div>}
+            {who()}
         </div>
     )
 }

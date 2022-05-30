@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Explicacion del Proyecto
+El proyecto es una aplicacion web que funciona como ecommerce, esta basado en la libreria de React y
+en el entorno de desarrollo Node. Este eccommerce es acerca de Hoodies (sudaderas, buzos, camperas).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Iniciar el proyecto
 
-## Available Scripts
+Clone el respositorio y abralo en su editor de codigo de preferencia.
 
-In the project directory, you can run:
+Para la instalacion de los paquetes es necesario tener Node instalado, debe instalar estos
+ archivos con los siguientes comandos:
+- npm install
+- create-react-app (React App)
+- react-router-dom (Libreria para Routing)
 
-### `npm start`
+### npm start
+Comando que ejecuta la aplicación en el modo de desarrollo.
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Estructura
 
-### `npm test`
+## Async Mock
+Archivo js que simula la llamada a una base de datos, contiene un array con los datos que se utilizan
+en este proyecto y una funcion para adquirir esos datos con un retraso de 2 segundos.
+## Componentes
+La aplicacion esta basada en componentes, cada uno de estos cuenta con su archivo js y css. En esta
+aplicacion los principales son:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### App
+Contiene todo el contenido de la pagina.
+### NavBar
+Es el nav de la pagina, alli esta el nombre de la marca, las categorias,
+el `CartWidget` (carrito de compra ), entre otras cosas.
+ 
+### Item 
+Card con informacion de un Hoodie, contiene imagen titulo y precio.
 
-### `npm run build`
+### ItemListContainer
+Tiene como objetivo montar los items y mostrarlos. Muestra los items que coincidan con la
+cateogria que se muestra en el url. Obtiene los datos de `Async Mock` y los filtra segun la 
+categoria, le pasa este array filtrado al comoponente `itemList` el cual los mapea a varios
+componentes `Item`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ItemDetail
+Muestra una Card detallada con informacion de un producto en particular, esta pensado para 
+mostrar un solo componente `ItemDetail` a la vez.
+### ItemDetailContainer
+Componente que obtiene el id del item en la url y los datos de `Async Mock` y monta un
+`ItemDetail` pasandole por props el item, contiene logica y hace validaciones.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Navegabilidad
+La aplicacion logra una navegabilidad fluida. Contiene las siguientes rutas:
+- /
+- /category/:categoryId
+- /item/:itemId
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Para esto se utilizan componentes importados de la libreria react-router-dom mencionada anteriormente.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Se utiliza `Link` para dirigir al usuario a otra pagina.
+- Se utiliza `Routes` y `Route` para indicar que mostrar segun la ruta.
+- Se utiliza `BrowserRouter` para envolver todo el contenido de la pagina que va a poder usar `Link`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se utiliza el metodo 'useParams()' para acceder al valor que se quiera de la url. (establecido en `Route`)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Licencia
+Pablo Duran | 2022 | Todos los derechos reservados.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
