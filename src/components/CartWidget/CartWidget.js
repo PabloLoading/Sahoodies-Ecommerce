@@ -7,7 +7,7 @@ const CartWidget=(props)=>{
         <Link className='link' to='/cart'>
             <div className='CartWidget'>
                 <BsCart size='1.6rem'/>
-                <div className='number'><p>{props.itemsNum}</p></div>
+                <div className='number'>{props.itemsQuant}</div>
             </div>
         </Link>
     )

@@ -7,10 +7,8 @@ en el entorno de desarrollo Node. Este eccommerce es acerca de Hoodies (sudadera
 Clone el respositorio y abralo en su editor de codigo de preferencia.
 
 Para la instalacion de los paquetes es necesario tener Node instalado, debe instalar estos
- archivos con los siguientes comandos:
+ archivos con el siguiente comando:
 - npm install
-- create-react-app (React App)
-- react-router-dom (Libreria para Routing)
 
 ### npm start
 Comando que ejecuta la aplicación en el modo de desarrollo.

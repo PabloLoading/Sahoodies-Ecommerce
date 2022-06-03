@@ -5,8 +5,14 @@ import {VscAccount} from 'react-icons/vsc';
 import {FiSearch} from 'react-icons/fi';
 import './NavBar.css'
 import {Link } from 'react-router-dom'
+import {useContext} from 'react'
+import CartContext from '../../Context/CartContext';
 
 function NavBar(){
+
+    const value =useContext(CartContext)
+    let itemsQuant=value.getQuantity()
+
     return (
         <div className='NavBar'>
             <nav>
@@ -25,7 +31,7 @@ function NavBar(){
                     <div className='nav-left-icons'>
                         <Link className='link' to='profile'><IconButton icon={VscAccount}/></Link>
                     </div>
-                    <CartWidget itemsNum={2}/>
+                    <CartWidget itemsQuant={itemsQuant}/>
                 </ul>
             </nav>
         </div>
