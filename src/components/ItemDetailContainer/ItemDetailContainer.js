@@ -2,7 +2,6 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import './ItemDetailContainer.css'
 import {useState , useEffect} from 'react'
 import { getItem } from '../../AsyncMock'
-import ItemCount from "../ItemCount/ItemCount"
 import { useParams } from "react-router-dom"
 
 
@@ -29,22 +28,22 @@ const ItemDetailContainer=(props)=>{
     const onAdd=(count)=>{
         console.log(`Agregue al carrito ${count} unidades`)
     }
-    const who=()=>{
+    const Who=()=>{
         if(!load){
             return <p>Loading ...</p>
         }
         else if(load && exist){
             return <ItemDetail onAdd={onAdd} item={product}/>
         }
-        else if(load && !exist){
+        else{
             return <h2>Lo sentimos, el producto que buscabas no existe.</h2>
         }
-
     }
+    
 
     return (
         <div className="item-detail-container">
-            {who()}
+            <Who />
         </div>
     )
 }

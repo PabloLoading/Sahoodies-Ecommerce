@@ -19,8 +19,12 @@ function NavBar(){
                     </ul>
                 </div>
                 <ul className='icons-list'>
-                    <div className='nav-left-icons'><IconButton to='/search' icon={FiSearch}/></div>
-                    <div className='nav-left-icons'><IconButton to='/profile'  icon={VscAccount}/></div>
+                    <div className='nav-left-icons'>
+                        <Link className='link' to='/search'><IconButton icon={FiSearch}/></Link>
+                    </div>
+                    <div className='nav-left-icons'>
+                        <Link className='link' to='profile'><IconButton icon={VscAccount}/></Link>
+                    </div>
                     <CartWidget itemsNum={2}/>
                 </ul>
             </nav>

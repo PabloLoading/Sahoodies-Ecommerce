@@ -7,6 +7,9 @@ const IconButton=(props)=>{
         size: '1.6rem'
     }
     let icono=props.icon(params);
+
+
+
     return (
         <div className="IconButton">
             {icono}

@@ -6,7 +6,7 @@ import IconButton from '../IconButton/IconButton'
 import {IoRemove} from 'react-icons/io5'
 
 const ItemCount = (props)=>{
-    const [count,setCount] = useState(props.initial || 0)
+    const [count,setCount] = useState(props.initial || 1)
 
     const increment = ()=>{
         if(count<props.stock){
@@ -14,7 +14,7 @@ const ItemCount = (props)=>{
         }
     }
     const decrement = () =>{
-        if(count>0){
+        if(count>1){
             setCount(count-1)
         }
     }
