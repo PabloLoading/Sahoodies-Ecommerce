@@ -14,11 +14,9 @@
     height: min-content;
     margin: 0;
     padding: 0;
-    
-
 }
 .cart-item-picture img{
-    width: 11rem;
+    width: 10rem;
     margin: 0;
     padding: 0;
     display:block;
@@ -33,7 +31,7 @@
     margin-bottom: 1rem;
 }
 .cart-item-count{
-    margin-top: 2rem;
+    margin-top: 1.6rem;
 }
 .delete-box{
     background-color: var(--color5);

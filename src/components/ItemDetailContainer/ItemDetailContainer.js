@@ -1,29 +1,28 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
 import './ItemDetailContainer.css'
 import {useState , useEffect} from 'react'
-import { getItem } from '../../AsyncMock'
 import { useParams } from "react-router-dom"
+import db from "../../services/firebase"
+import { getDoc,doc } from "firebase/firestore"
 
-
-const ItemDetailContainer=(props)=>{
+const ItemDetailContainer=()=>{
 
     const {itemId} = useParams()
     const [product,setProduct] = useState({})
-    const [exist,setExist] = useState(true)
     const [load,setLoad] = useState(false)
 
     useEffect(()=>{
 
-        getItem(itemId).then(item=>{
-            setProduct(item)
-        })
-        .catch(e=>setExist(false))
+        getDoc(doc(db,'products',itemId)).then(
+            doc=>{
+                let itemBrought={id : doc.id , ...doc.data()}
+                setProduct(itemBrought)
+            }
+        ).catch(e=>console.log(e))
         .finally(()=>setLoad(true))
         
-        
 
-    },[itemId,exist])
-
+    },[itemId])
 
     const onAdd=(count)=>{
         console.log(`Agregue al carrito ${count} unidades`)
@@ -32,7 +31,7 @@ const ItemDetailContainer=(props)=>{
         if(!load){
             return <p>Loading ...</p>
         }
-        else if(load && exist){
+        else if(load && product.name){
             return <ItemDetail onAdd={onAdd} item={product}/>
         }
         else{
