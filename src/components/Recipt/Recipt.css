@@ -1,0 +1,21 @@
+
+.detail-line{
+    margin: 1rem 0;
+    text-align: left;
+}
+.detail-line .name{
+    font-size: 1.15rem;
+    color: rgb(200,200,200);
+}
+.detail-line .cost{
+    color: rgb(160,160,160);
+}
+.subtotal{
+    margin: 2rem 0;
+}
+.subtotal p{
+    font-size: 1.3rem;
+    color: rgb(230,230,230);
+    border-bottom: 2px solid #eee;
+    
+}

@@ -31,7 +31,7 @@ function NavBar(){
                     <div className='nav-left-icons'>
                         <Link className='link' to='profile'><IconButton icon={VscAccount}/></Link>
                     </div>
-                    <CartWidget itemsQuant={itemsQuant}/>
+                    {itemsQuant>0 && <CartWidget itemsQuant={itemsQuant}/>}
                 </ul>
             </nav>
         </div>

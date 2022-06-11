@@ -9,11 +9,12 @@ import CartContext from '../../Context/CartContext'
 
 const ItemDetail=({item})=>{
 
-    const {addItem}=useContext(CartContext)
+    const {addItem,getItemQuantity}=useContext(CartContext)
+    let available=item.stock-getItemQuantity(item)
 
     const onAdd=(count)=>{
         setItemsQuant(count)
-        let obj={...item , quantity:count}
+        let obj={quantity:count,...item}
         addItem(obj)
     }
     const [itemsQuant,setItemsQuant]=useState(0) 
@@ -29,7 +30,7 @@ const ItemDetail=({item})=>{
                     <p>{item.description}</p>
                     <p className='price'>${item.price} USD</p>
                 </div>
-                {itemsQuant>0 ? <ItemAdded/> : <ItemCount onAdd={onAdd} stock={item.stock}/>}
+                {itemsQuant>0 ? <ItemAdded/> : <ItemCount onAdd={onAdd} stock={available}/>}
             </div>
         </section>
     )

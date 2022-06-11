@@ -1,5 +1,4 @@
 import { createContext,useState } from "react";
-import ItemList from "../components/ItemList/ItemList";
 
 const CartContext=createContext()
 
@@ -11,8 +10,35 @@ export const CartContextProvider=(props)=>{
         products.map(item=>sum+=item.quantity)
         return sum
     }
+    
+    const getSubtotal=()=>{
+        let total=0;
+        for(let product of products){
+            total+=product.price*product.quantity
+        }
+        return total.toFixed(2)
+    }
+    const deleteItem=(item)=>{
+        let arr=[]
+        for(let product of products){
+            if(product.id!=item.id){
+                arr.push(product)
+            }
+        }
+        console.log(arr)
+        setProducts(arr)
+    }
+
     const isIn=(product)=>{
         return products.some(item=>item.id==product.id)
+    }
+    const getItemQuantity=(item)=>{
+        for(let product of products){
+            if(product.id==item.id){
+                return product.quantity;
+            }
+        }
+        return 0
     }
     const addItem=(item)=>{
         if(!isIn(item)){
@@ -30,7 +56,17 @@ export const CartContextProvider=(props)=>{
         
     }
     console.log(products)
-    const inValue={products,setProducts,getQuantity,addItem}
+    const modifyQuantity=(item,newQuant)=>{
+        let arr=products.slice()
+        for(let product of arr){
+            if(product.id==item.id){
+                product.quantity=newQuant
+            }
+        }
+        setProducts(arr);
+    }
+    
+    const inValue={products,setProducts,getQuantity,addItem,modifyQuantity,getItemQuantity,getSubtotal,deleteItem,isIn}
     return (
         <CartContext.Provider value={inValue}>
             {props.children}
