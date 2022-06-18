@@ -25,11 +25,13 @@ const CartItem=({item})=>{
                 <img src={item.pictureUrl}/>
             </div>
             <div className="cart-item-info">
-                <p className='cat'>{item.categoryId}</p>
-                <h3>{item.name}</h3>
-                <p>$USD {item.price}</p>
-                <div className='cart-item-count'>
-                    <ItemCount noButton={true} stock={item.stock} handleChange={handleChange} initial={itemQuant}/>
+                <div className='shrinked'>
+                    <p className='cat'>{item.categoryId}</p>
+                    <h3>{item.name}</h3>
+                    <p>$USD {item.price}</p>
+                    <div className='cart-item-count'>
+                        <ItemCount noButton={true} stock={item.stock} handleChange={handleChange} initial={itemQuant}/>
+                    </div>
                 </div>
                 <div className='delete-box' onClick={goDelete}>
                     <AiFillDelete size={'1.5rem'}/>
