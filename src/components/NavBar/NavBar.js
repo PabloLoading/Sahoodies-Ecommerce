@@ -29,7 +29,7 @@ function NavBar(){
                         <Link className='link' to='/search'><IconButton icon={FiSearch}/></Link>
                     </div>
                     <div className='nav-left-icons'>
-                        <Link className='link' to='profile'><IconButton icon={VscAccount}/></Link>
+                        <Link className='link' to='account'><IconButton icon={VscAccount}/></Link>
                     </div>
                     {itemsQuant>0 && <CartWidget itemsQuant={itemsQuant}/>}
                 </ul>
