@@ -4,6 +4,7 @@ import './ItemCount.css'
 import {HiOutlinePlus} from 'react-icons/hi'
 import IconButton from '../IconButton/IconButton'
 import {IoRemove} from 'react-icons/io5'
+import { toast } from 'react-toastify'
 
 const ItemCount = (props)=>{
     const [count,setCount] = useState(props.initial || 1)
@@ -33,6 +34,7 @@ const ItemCount = (props)=>{
         if(count<=props.stock){
             props.onAdd(count)
         }
+        toast.success("Added correctly!")
     }
 
 

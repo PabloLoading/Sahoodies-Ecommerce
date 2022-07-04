@@ -40,6 +40,9 @@ export const CartContextProvider=(props)=>{
         }
         return 0
     }
+    const clearCart=()=>{
+        setProducts([])
+    }
     const addItem=(item)=>{
         if(!isIn(item)){
             setProducts([...products,item])
@@ -55,7 +58,6 @@ export const CartContextProvider=(props)=>{
         }
         
     }
-    console.log(products)
     const modifyQuantity=(item,newQuant)=>{
         let arr=products.slice()
         for(let product of arr){
@@ -66,7 +68,7 @@ export const CartContextProvider=(props)=>{
         setProducts(arr);
     }
     
-    const inValue={products,setProducts,getQuantity,addItem,modifyQuantity,getItemQuantity,getSubtotal,deleteItem,isIn}
+    const inValue={products,setProducts,getQuantity,addItem,modifyQuantity,getItemQuantity,getSubtotal,deleteItem,isIn,clearCart}
     return (
         <CartContext.Provider value={inValue}>
             {props.children}

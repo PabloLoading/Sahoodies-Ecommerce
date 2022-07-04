@@ -6,12 +6,12 @@ import {getFirestore} from 'firebase/firestore'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCGdZua5qXW_tRL58avivtLMVJMTfI50LA",
-  authDomain: "sahoodies-ecommerce.firebaseapp.com",
-  projectId: "sahoodies-ecommerce",
-  storageBucket: "sahoodies-ecommerce.appspot.com",
-  messagingSenderId: "37653572436",
-  appId: "1:37653572436:web:5f6ea8056df01ff230f6c1"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

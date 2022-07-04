@@ -1,10 +1,8 @@
-import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import ItemList from '../ItemList/ItemList'
+import { useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import {getDocs,collection, query,where} from 'firebase/firestore'
-import db from '../../services/firebase'
+import { getProducts } from '../../services/firebase/firestore'
 
 const ItemListContainer=()=>{
 
@@ -15,18 +13,9 @@ const ItemListContainer=()=>{
     
     useEffect(()=>{
         setLoad(false)
-        const filtedCollection=catId
-        ? query(collection(db,'products'),where('categoryId','==',catId))
-        : collection(db,'products')
-
-        getDocs(filtedCollection).then(
-            response=>{
-                const productos=response.docs.map(doc=>{
-                    return {id: doc.id, ...doc.data()}
-                })
-                setProducts(productos)
-            }
-        ).catch(e=>console.log(e))  
+        getProducts(catId)
+        .then(products=>setProducts(products))
+        .catch(e=>console.log(e))  
         .finally(()=>setLoad(true))
         
     },[catId])
