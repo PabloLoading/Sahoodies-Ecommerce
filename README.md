@@ -42,7 +42,7 @@ REACT_APP_appId =
 - /item/:itemId
 - /cart
 
- ### Collections & Auth
+ # Collections & Auth
  For auth is used Firestore Authentication, and for storing collections firebase firestore:
  - categories
  - orders
