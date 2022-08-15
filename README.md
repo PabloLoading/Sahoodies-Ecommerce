@@ -21,6 +21,10 @@ REACT_APP_storageBucket =
 REACT_APP_messagingSenderId =
 REACT_APP_appId =
 ```
+
+# Demo
+![aaa](https://user-images.githubusercontent.com/90655224/184688323-3c0e2222-2563-4fe1-b4ab-67d1641f03cd.gif)
+
 # Routes
 
 ### Loged Routes:
@@ -38,11 +42,13 @@ REACT_APP_appId =
 - /item/:itemId
 - /cart
 
+ ### Collections & Auth
+ For auth is used Firestore Authentication, and for storing collections firebase firestore:
+ - categories
+ - orders
+ - products
+ - users
  
-# Demo
-![aaa](https://user-images.githubusercontent.com/90655224/184688323-3c0e2222-2563-4fe1-b4ab-67d1641f03cd.gif)
-
-
 
 # External libraries
 -  [Formik](https://formik.org/) : facilita la creacion y manejo de formularios. 
