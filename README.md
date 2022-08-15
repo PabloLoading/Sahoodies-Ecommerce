@@ -1,6 +1,6 @@
-# Explicacion del Proyecto
-El proyecto es una aplicacion web que funciona como ecommerce, esta basado en la libreria de React y
-en el entorno de desarrollo Node. Este eccommerce es acerca de Hoodies (sudaderas, buzos, camperas).
+# Project
+The project is a web app that works as a ecommerce, it is react based and integrates Firebase.
+This ecommerce is about Hoodies.
 
 # Run app locally
 
@@ -49,10 +49,10 @@ REACT_APP_appId =
  - products
  - users
  
-
+facilita la creacion y manejo de formularios. 
 # External libraries
--  [Formik](https://formik.org/) : facilita la creacion y manejo de formularios. 
-- [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) : notificacion popup sencilla. 
+-  [Formik](https://formik.org/) : makes easy to work with forms.
+- [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) : simple popup notification. 
 
 # Technologies
 
