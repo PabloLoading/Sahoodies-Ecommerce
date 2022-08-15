@@ -1,0 +1,48 @@
+
+.order-template{
+    background-color: var(--color2);
+    padding: 3rem;
+    color: #eee;
+    border-radius: .6rem;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 1rem;
+}
+.order-template h2{
+    margin-bottom: 2rem;
+}
+.order-buttons{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.order-template .pay-btn{
+    font-size: 1.2rem;
+    padding: .8rem .5rem;
+    border-radius: .3rem;
+    border: 2px solid transparent;
+    color: var(--color2);
+    background-color: #eee;
+    margin: .4rem .2rem;
+}
+.pay-btn:hover{
+    cursor: pointer;
+    background-color:transparent ;
+    color: #eee;
+    border: 2px solid #eee;
+}
+.detail-line{
+    margin: 1rem 0;
+    text-align: left;
+}
+.order-template .subtotal{
+    margin: 2rem 0;
+}
+.order-template .subtotal p{
+    font-size: 1.2rem;
+    border-bottom: 2px solid #eee;
+}
+.order-template .recipt h3{
+    font-size: 1.4rem;
+    font-weight: 400;
+}

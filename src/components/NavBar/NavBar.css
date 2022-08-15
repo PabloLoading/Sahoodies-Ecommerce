@@ -1,0 +1,76 @@
+
+
+.NavBar{
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 0;
+    width: 100%;
+    position: sticky;
+    z-index: 200;
+    margin-bottom: 5rem;
+    top: 0;
+}
+
+
+nav{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.left-wrapper{
+    display: flex;
+    align-items: baseline;
+}
+h1{
+    margin-right: 2rem;
+}
+.link{
+    text-decoration: none;
+}
+.nav-left-icons{
+    margin: 0 1.2rem;
+}
+.nav-left-icons:hover{
+    cursor: pointer;
+}
+h1:hover{
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+}
+.icons-list{
+    display: flex;
+    align-items:baseline;
+}
+
+.icons-list .account{
+    border-bottom: 3px solid var(--color5);
+}
+.tiny-view-titles{
+    display: none;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .dr{
+        display: none;
+    }
+    .tiny-view-titles{
+        display: block;
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        align-items: center;
+    }
+    .linked-title{
+        background-color: #000;
+        padding: .8rem 1.6rem;
+        
+    }
+}

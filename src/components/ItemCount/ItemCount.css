@@ -1,0 +1,42 @@
+.item-count{
+    --main-color: var(--color2);
+}
+
+.counter{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid var(--color4);
+}
+.counter p{
+    font-size: 1.1rem;
+}
+.move-count{
+    padding-top: 3px;
+    font-size: 1.25rem;
+    width: 2rem;
+    color: var(--main-color);
+}
+.move-count:hover{
+    cursor: pointer;
+}
+
+
+.addItem{
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    padding: 4px 0;
+}
+.addItem:hover{
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+}

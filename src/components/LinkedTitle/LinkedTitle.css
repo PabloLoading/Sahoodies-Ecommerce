@@ -1,0 +1,23 @@
+
+li{
+    margin: 0 1rem;
+    font-weight: 500;
+    list-style: none;
+    border-bottom: 2px solid transparent;
+    
+}
+.link{
+    color: unset;
+    text-decoration: none;
+    
+}
+li:hover{
+    border-bottom: 2px solid #000;
+}
+
+@media only screen and (max-width: 550px) {
+    li{
+        color: #fff;
+        margin: .8rem;
+    }
+}

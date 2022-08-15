@@ -1,0 +1,33 @@
+.account-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 2rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+.ld{
+    font-size: .9rem;
+}
+.ls{
+    margin-top: 1rem;
+}
+.user-info{
+    max-width: 600px;
+}
+.f-shadow{
+    color: #665;
+}
+.f-shadow:focus{
+    color:#000;
+}
+
+@media only screen and (max-width: 850px) {
+    .account-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+    .user-info{
+        margin: 0 auto;
+    }
+  }

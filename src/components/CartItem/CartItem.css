@@ -1,0 +1,84 @@
+
+.cart-item{
+    display: flex;
+    border: 2px solid #ccc;
+    justify-content: space-between;
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    position: relative;
+}
+.cart-item-sale{
+    border: 2px solid var(--colorSale);
+}
+.cart-item .sale-container{
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+    padding: .2rem .5rem;
+    font-size: .8rem;
+    color: #fff;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    background-color: var(--colorSale);
+}
+.sale-container p{
+    margin-bottom: .2rem;
+    margin-right: .2rem;
+}
+.cart-item-info .cat{
+    text-align: left;
+}
+.cart-item-picture{
+    display: flex;
+}
+.cart-item-picture img{
+    width: 100%;
+    max-width: 14rem;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.cart-item-info{
+    padding:  2rem 4rem;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.cart-item .shrinked{
+    max-width: 280px;
+    margin: 0 auto;
+}
+.cart-item-info h3{
+    margin-bottom: 1rem;
+}
+.cart-item-count{
+    margin-top: 1.6rem;
+}
+.delete-box{
+    background-color: var(--color5);
+    color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+     right: 0;
+}
+.delete-box:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+    .cart-item{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .cart-item-picture img{
+        max-width: 1000rem;
+    }
+  }
+  

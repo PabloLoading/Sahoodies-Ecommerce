@@ -1,0 +1,44 @@
+.order-detail{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 1rem;
+}
+
+.order-data{
+    border: 2px solid var(--color3);
+    width: 100%;
+    background-color: rgb(135, 196, 234);
+    color: #000;
+    padding: 2rem;
+    margin: 0 auto 1rem;
+    border-radius: .5rem;
+    max-width: 400px;
+    min-height: 0;
+}
+.buyer{
+    margin-bottom: 4rem;
+}
+.buyer p{
+    margin-top: 1.4rem;
+    text-align: left;
+}
+
+.order-products{
+    margin: 0 auto;
+}
+.order-data .subtotal{
+    border-bottom: 2px solid #000;
+    font-size: 1.4rem;
+    margin: 1.5rem;
+}
+.order-data h3{
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+@media only screen and (max-width: 800px) {
+    .order-detail{
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+  }
