@@ -25,6 +25,8 @@ REACT_APP_appId =
 # Demo
 ![aaa](https://user-images.githubusercontent.com/90655224/184688323-3c0e2222-2563-4fe1-b4ab-67d1641f03cd.gif)
 
+### [See Deployed](https://sahoodies.vercel.app/)
+
 # Routes
 
 ### Loged Routes:
@@ -49,7 +51,7 @@ REACT_APP_appId =
  - products
  - users
  
-facilita la creacion y manejo de formularios. 
+
 # External libraries
 -  [Formik](https://formik.org/) : makes easy to work with forms.
 - [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) : simple popup notification. 
