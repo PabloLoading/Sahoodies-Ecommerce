@@ -25,7 +25,7 @@ REACT_APP_appId =
 # Demo
 ![aaa](https://user-images.githubusercontent.com/90655224/184688323-3c0e2222-2563-4fe1-b4ab-67d1641f03cd.gif)
 
-### [See Deployed](https://sahoodies.vercel.app/)
+[See Deployed](https://sahoodies.vercel.app/)
 
 # Routes
 
