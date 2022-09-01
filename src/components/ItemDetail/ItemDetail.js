@@ -1,6 +1,7 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import ItemAdded from '../ItemAdded/ItemAdded'
+import { AiFillThunderbolt } from 'react-icons/ai'
 
 
 const ItemDetail=({item,stockAvailable,onAdd,dbStock,added,sale=false})=>{
@@ -13,9 +14,14 @@ const ItemDetail=({item,stockAvailable,onAdd,dbStock,added,sale=false})=>{
                     <img src={item.pictureUrl} />
                 </div>
                 <div className='pops'>
-                    {!dbStock && <div className='no-stock'>OUT OF STOCK</div>}
-                    {sale && <div className='item-detail-sale'>HOT SALE</div>}
+                    {!dbStock && <div className='no-stock'>Out of Stock</div>}
+                    {sale && 
+                    <div className='sale-container-detail'>
+                        <p>Hot Sale</p>
+                        <AiFillThunderbolt/>
+                    </div>}
                 </div>
+                
                 <div className='info-counter'>
                 
                     <div className='details'>

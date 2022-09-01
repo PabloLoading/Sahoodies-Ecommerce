@@ -60,8 +60,23 @@
     margin: .5rem;
 }
 .pops div{
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
+
+.sale-container-detail{
+    padding: .2rem .5rem;
+    font-size: 1rem;
+    color: #fff;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    background-color: var(--colorSale);
+    justify-content: right;
+}
+.sale-container-detail p{
+    margin: .3rem;
+}
+
 
 @media only screen and (max-width: 850px) {
     .wrapper{
